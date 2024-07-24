@@ -63,7 +63,7 @@ Un autre graphique montre que la majorité des clients ayant dépensé des monta
 
 Pour identifier les catégories de produits les plus vendus, j'ai créé un diagramme en secteurs pour les 20 produits les plus vendus. On remarque que près de 30% des produits sont des couches jetables, 10.6% des produits sont des pyjamas et vêtements de nuit, et le reste est réparti de manière presque équitable entre 8.8% et 7%.
 
-### Calcul du RFM score afin de distinguer les tops acheteurs
+### Calcul du RFPM score afin de distinguer les tops acheteurs
 
 Dans cette partie de l'analyse, j'ai mis en place un modèle RFPM pondéré pour évaluer la valeur des clients en fonction de leur comportement d'achat. Le modèle RFPM (Récence, Fréquence, Montant et nombre de produits) est une technique de segmentation client qui permet d'identifier les clients les plus précieux en se basant sur 4 critères principaux :
 
@@ -75,8 +75,8 @@ Montant (M) : Valeur totale des achats effectués par le client. Les clients dé
 
 PS: j'ai ajouté à cela le nombre de produits (P) étant donné que le nombre de produits acheté est une métrique importante pour l'entreprise.
 
-#### Pourquoi le Modèle RFM ?
-Le modèle RFM est utilisé pour:
+#### Pourquoi le Modèle RFPM ?
+Le modèle RFPM est utilisé pour:
 
 1. Identifier les meilleurs clients :
 
