@@ -5,7 +5,9 @@ Le projet inclut plusieurs étapes allant du nettoyage des données à la visual
 
 ## Structure des Fichiers
 product.csv: Contient les informations sur les produits.
+
 coupon.csv: Contient les informations sur les coupons utilisés par les clients.
+
 order.csv: Contient les informations sur les commandes passées par les clients.
 ## Étapes de l'Analyse
 ### Nettoyage des Données:
@@ -33,6 +35,7 @@ Nombre de commandes,
 Moyenne de la commande, 
 Nombre de produits achetés par commande, 
 Nombre de coupons utilisés, 
+
 J'ai ensuite visualisé ces critères côte à côte avec des boxplots pour observer la dispersion des données et les tendances associées.
 
 3. Analyse des Boxplots:
@@ -47,6 +50,7 @@ Montant total d'achat et nombre de commandes : 0.8 - Forte corrélation positive
 Nombre de commandes et nombre de produits achetés par commande : 0.77 - Forte corrélation positive, indiquant que lorsque le nombre de commandes augmente, le nombre de produits achetés augmente également.
 Nombre de commandes et moyenne de la commande : -0.1 - Faible corrélation négative, suggérant que la moyenne de la commande n'est pas fortement influencée par le nombre de commandes.
 Nombre de produits et moyenne de la commande : -0.077 - Faible corrélation négative, indiquant que la moyenne de la commande n'est pas fortement influencée par le nombre de produits.
+
 Les corrélations fortes (0.8 et 0.77) montrent que le nombre de commandes est un bon indicateur à la fois du montant total des achats et du nombre de produits achetés. Ces relations peuvent être utilisées pour prédire le comportement d'achat des clients et pour segmenter les clients selon leur valeur.
 
 5. Visualisations avec lmplot:
@@ -114,8 +118,8 @@ On remarque que la grosse concenration du montant d'achat varie approximativemen
 
 2. Histogrammes avec Densité :
 
-C'est une illustration de la distribution des montants d'achat, du nombre de commandes et du nombre de produits pour les top 5% des clients.
-Affichent la densité des données pour mieux comprendre les tendances au sein de ce segment de clients.
+C'est une illustration de la distribution des montants d'achat, du nombre de commandes et du nombre de produits pour les top 5% des clients 
+avec la densité des données pour mieux comprendre les tendances au sein de ce segment de clients.
 Ces visualisations nous aident à identifier les caractéristiques communes des clients les plus précieux et à mieux comprendre leurs comportements d'achat.
 
 ## Conclusion
