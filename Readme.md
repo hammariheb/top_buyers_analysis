@@ -1,6 +1,6 @@
 # Analyse des Top Acheteurs
 ## Description du Projet
-Ce projet a pour objectif d'identifier les top acheteurs d'une entreprise en utilisant une analyse exploratoire des données et un modèle RFM personnalisé (Récence, Fréquence, Montant). 
+Ce projet a pour objectif d'identifier les top acheteurs d'une entreprise en utilisant une analyse exploratoire des données et un modèle RFM personnalisé (Récence, Fréquence, Montant et Nombre de produits). 
 Le projet inclut plusieurs étapes allant du nettoyage des données à la visualisation des tendances d'achat, en passant par l'analyse des corrélations et la mise en place d'un modèle pondéré RFM.
 
 ## Structure des Fichiers
@@ -10,8 +10,9 @@ order.csv: Contient les informations sur les commandes passées par les clients.
 ## Étapes de l'Analyse
 ### Nettoyage des Données:
 
-Importation des fichiers CSV.
-Traitement des valeurs manquantes en les et des doublons.
+Importation des fichiers CSV en spécifiant le séparateur afin de lire correctement les fichiers.
+Traitement des valeurs manquantes.
+Traitement des doublons.
 Traitement du type de quelques colonnes.
 
 ### Analyse Exploratoire des Données (EDA):
@@ -30,7 +31,7 @@ Nombre de coupons utilisés
 J'ai ensuite visualisé ces critères côte à côte avec des boxplots pour observer la dispersion des données et les tendances associées.
 
 3. Analyse des Boxplots
-Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client atteint environ 5190 euros.
+Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client a atteint environ 5190 euros.
 
 4. Matrice de Corrélation
 Pour explorer les relations entre les différents critères, j'ai créé une matrice de corrélation :
@@ -51,18 +52,18 @@ Pour identifier les catégories de produits les plus vendus, j'ai créé un diag
 
 ### Calcul du RFM score afin de distinguer les tops acheteurs
 
-Dans cette partie de l'analyse, nous avons mis en place un modèle RFM pondéré pour évaluer la valeur des clients en fonction de leur comportement d'achat. Le modèle RFM (Récence, Fréquence, Montant) est une technique de segmentation client qui permet d'identifier les clients les plus précieux en se basant sur trois critères principaux :
+Dans cette partie de l'analyse, j'ai mis en place un modèle RFPM pondéré pour évaluer la valeur des clients en fonction de leur comportement d'achat. Le modèle RFPM (Récence, Fréquence, Montant et nombre de produits) est une technique de segmentation client qui permet d'identifier les clients les plus précieux en se basant sur 4 critères principaux :
 
 Récence (R) : Temps écoulé depuis la dernière commande du client. Les clients ayant effectué des achats récemment sont généralement plus susceptibles de refaire un achat.
 Fréquence (F) : Nombre total de commandes passées par le client. Les clients qui achètent plus fréquemment sont souvent plus fidèles.
 Montant (M) : Valeur totale des achats effectués par le client. Les clients dépensant plus d'argent sont considérés comme plus précieux.
-et j'ai ajouté à cela le nombre de produits étant donné que le nomnbre est une métrique importante pour l'entreprise.
+PS: j'ai ajouté à cela le nombre de produits (P) étant donné que le nombre de produits acheté est une métrique importante pour l'entreprise.
 
 #### Pourquoi le Modèle RFM ?
 Le modèle RFM est utilisé pour:
 
 1. Identifier les meilleurs clients :
- En combinant les scores de récence, de fréquence, de montant et de nombre de produit, nous pouvons donc déterminer quels clients sont les plus précieux pour l'entreprise.
+ En combinant les scores de récence, de fréquence, de montant et de nombre de produit, j'ai pu donc déterminé quels clients sont les plus précieux pour l'entreprise.
 2. Segmenter les clients : 
 Cela permet de créer des segments de clients basés sur leur comportement d'achat et de cibler ces segments avec des stratégies marketing spécifiques.
 3. Prédire le comportement futur des clients : 
@@ -73,12 +74,12 @@ Pour affiner notre modèle RFM, nous avons attribué des poids spécifiques à c
 Montant (M) : Pondéré à 0.4
 Fréquence (F) : Pondéré à 0.3
 Récence (R) : Pondéré à 0.2
-Nombre de produits : Pondéré à 0.1
+Nombre de produits (P) : Pondéré à 0.1
 
 Ces pondérations permettent de donner plus d'importance aux critères que nous jugeons plus influents dans l'évaluation de la valeur des clients.
 
 #### Analyse des Top 5% des Clients
-Nous avons sélectionné les top 10% des clients en fonction de leur score RFM pondéré. Pour ces clients, nous avons effectué les analyses suivantes :
+J'ai sélectionné les top 5% des clients en fonction de leur score RFPM pondéré. Pour ces clients, j'ai effectué les analyses suivantes :
 
 1. Violin Plot :
 
@@ -87,9 +88,9 @@ On remarque que la grosse concenration du montant d'achat varie approximativemen
 
 2. Histogrammes avec Densité :
 
-Illustrent la distribution des montants d'achat, du nombre de commandes et du nombre de produits pour les top 5% des clients.
+C'est une illustration de la distribution des montants d'achat, du nombre de commandes et du nombre de produits pour les top 5% des clients.
 Affichent la densité des données pour mieux comprendre les tendances au sein de ce segment de clients.
 Ces visualisations nous aident à identifier les caractéristiques communes des clients les plus précieux et à mieux comprendre leurs comportements d'achat.
 
 ## Conclusion
-Ce projet démontre l'importance d'une analyse approfondie des données clients pour identifier les comportements d'achat, segmenter les clients et optimiser les stratégies marketing. En utilisant des techniques de visualisation avancées et un modèle RFM pondéré, nous avons pu obtenir des insights précieux sur les clients les plus précieux de l'entreprise. Ces insights peuvent être utilisés pour prendre des décisions stratégiques et améliorer la performance globale de l'entreprise.
+Ce projet démontre l'importance d'une analyse approfondie des données clients pour identifier les comportements d'achat, segmenter les clients et optimiser les stratégies marketing. En utilisant des techniques de visualisation avancées et un modèle RFPM pondéré, nous avons pu obtenir des insights précieux sur les clients les plus précieux de l'entreprise. Ces insights peuvent être utilisés pour prendre des décisions stratégiques et améliorer la performance globale de l'entreprise.
