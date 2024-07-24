@@ -25,11 +25,11 @@ La première visualisation est un diagramme à barres qui montre les deux statut
    
 Pour comprendre les tendances d'achat et détecter les anomalies potentielles, j'ai créé un dataframe regroupant les informations suivantes par acheteur :
 
-Montant total d'achat
-Nombre de commandes
-Moyenne de la commande
-Nombre de produits achetés par commande
-Nombre de coupons utilisés
+Montant total d'achat, 
+Nombre de commandes, 
+Moyenne de la commande, 
+Nombre de produits achetés par commande, 
+Nombre de coupons utilisés, 
 J'ai ensuite visualisé ces critères côte à côte avec des boxplots pour observer la dispersion des données et les tendances associées.
 
 3. Analyse des Boxplots:
