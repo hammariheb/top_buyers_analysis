@@ -36,10 +36,6 @@ J'ai ensuite visualisé ces critères côte à côte avec des boxplots pour obse
    
 Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client a atteint environ 5190 euros.
 
-5. Matrice de Corrélation: 
-
-Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client a atteint environ 5190 euros.
-
 5. Matrice de Corrélation:
 
 Pour explorer les relations entre les différents critères, j'ai créé une matrice de corrélation :
