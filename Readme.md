@@ -17,10 +17,10 @@ Traitement du type de quelques colonnes.
 
 ### Analyse Exploratoire des Données (EDA):
 
-1. Visualisation des Statuts de Commande
+1. Visualisation des Statuts de Commande:
 La première visualisation est un diagramme à barres qui montre les deux statuts de commandes : "Seller_paid" (commande confirmée et acheteur payé) et "cancelled" (commande annulée).
 
-2. Quantification et Exploration des Critères des Acheteurs
+2. Quantification et Exploration des Critères des Acheteurs:
 Pour comprendre les tendances d'achat et détecter les anomalies potentielles, j'ai créé un dataframe regroupant les informations suivantes par acheteur :
 
 Montant total d'achat
@@ -30,7 +30,7 @@ Nombre de produits achetés par commande
 Nombre de coupons utilisés
 J'ai ensuite visualisé ces critères côte à côte avec des boxplots pour observer la dispersion des données et les tendances associées.
 
-3. Analyse des Boxplots
+3. Analyse des Boxplots:
 Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client a atteint environ 5190 euros.
 
 4. Matrice de Corrélation
@@ -42,12 +42,12 @@ Nombre de commandes et moyenne de la commande : -0.1 - Faible corrélation néga
 Nombre de produits et moyenne de la commande : -0.077 - Faible corrélation négative, indiquant que la moyenne de la commande n'est pas fortement influencée par le nombre de produits.
 Les corrélations fortes (0.8 et 0.77) montrent que le nombre de commandes est un bon indicateur à la fois du montant total des achats et du nombre de produits achetés. Ces relations peuvent être utilisées pour prédire le comportement d'achat des clients et pour segmenter les clients selon leur valeur.
 
-5. Visualisations avec lmplot
+5. Visualisations avec lmplot:
 J'ai utilisé la fonction lmplot de seaborn pour visualiser les relations entre différents critères. Une illustration intéressante montre une relation entre la moyenne de commande par client et le nombre de produits achetés. La majorité des clients semblent s'intéresser aux produits moins chers, ce qui est confirmé par les moyennes de commande les plus basses. De plus, cette population achète un plus grand nombre de produits par rapport aux clients ayant une moyenne de dépense supérieure.
 
 Un autre graphique montre que la majorité des clients ayant dépensé des montants élevés n'utilisent pas particulièrement les coupons. Cela pourrait indiquer qu'il serait bénéfique d'explorer les raisons potentielles de ce comportement.
 
-6. Analyse des Catégories de Produits
+6. Analyse des Catégories de Produits:
 Pour identifier les catégories de produits les plus vendus, j'ai créé un diagramme en secteurs pour les 20 produits les plus vendus. On remarque que près de 30% des produits sont des couches jetables, 10.6% des produits sont des pyjamas et vêtements de nuit, et le reste est réparti de manière presque équitable entre 8.8% et 7%.
 
 ### Calcul du RFM score afin de distinguer les tops acheteurs
