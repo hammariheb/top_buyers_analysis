@@ -11,8 +11,11 @@ order.csv: Contient les informations sur les commandes passées par les clients.
 ### Nettoyage des Données:
 
 Importation des fichiers CSV en spécifiant le séparateur afin de lire correctement les fichiers.
+
 Traitement des valeurs manquantes.
+
 Traitement des doublons.
+
 Traitement du type de quelques colonnes.
 
 ### Analyse Exploratoire des Données (EDA):
