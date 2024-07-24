@@ -21,13 +21,8 @@ Traitement du type de quelques colonnes.
 
 La première visualisation est un diagramme à barres qui montre les deux statuts de commandes : "Seller_paid" (commande confirmée et acheteur payé) et "cancelled" (commande annulée).
 
-<<<<<<< HEAD
 2. Quantification et Exploration des Critères des Acheteurs:
-
-=======
-3. Quantification et Exploration des Critères des Acheteurs:
    
->>>>>>> 664e42d471e6716547bd008bcd2f7ff923d0ec83
 Pour comprendre les tendances d'achat et détecter les anomalies potentielles, j'ai créé un dataframe regroupant les informations suivantes par acheteur :
 
 Montant total d'achat
@@ -38,18 +33,15 @@ Nombre de coupons utilisés
 J'ai ensuite visualisé ces critères côte à côte avec des boxplots pour observer la dispersion des données et les tendances associées.
 
 3. Analyse des Boxplots:
-<<<<<<< HEAD
+   
 Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client a atteint environ 5190 euros.
 
-4. Matrice de Corrélation: 
+5. Matrice de Corrélation: 
 
-=======
-   
 Les boxplots révèlent une grande variation des données, en particulier pour le montant d'achat et la moyenne de commande par client, ce qui est confirmé par des écarts types respectifs de 80 et 23. Cela implique une divergence significative dans les comportements d'achat des clients. Bien que l'IQR (Intervalle Interquartile) des différents critères soit relativement faible (par exemple, 75% des montants d'achat sont en dessous de 77 euros), le montant maximal payé par un client a atteint environ 5190 euros.
 
 5. Matrice de Corrélation:
-   
->>>>>>> 664e42d471e6716547bd008bcd2f7ff923d0ec83
+
 Pour explorer les relations entre les différents critères, j'ai créé une matrice de corrélation :
 
 Montant total d'achat et nombre de commandes : 0.8 - Forte corrélation positive, indiquant qu'à mesure que le nombre de commandes augmente, le montant total d'achat tend à augmenter également.
@@ -58,23 +50,14 @@ Nombre de commandes et moyenne de la commande : -0.1 - Faible corrélation néga
 Nombre de produits et moyenne de la commande : -0.077 - Faible corrélation négative, indiquant que la moyenne de la commande n'est pas fortement influencée par le nombre de produits.
 Les corrélations fortes (0.8 et 0.77) montrent que le nombre de commandes est un bon indicateur à la fois du montant total des achats et du nombre de produits achetés. Ces relations peuvent être utilisées pour prédire le comportement d'achat des clients et pour segmenter les clients selon leur valeur.
 
-<<<<<<< HEAD
-5. Visualisations avec lmplot
-
-=======
 5. Visualisations avec lmplot:
    
->>>>>>> 664e42d471e6716547bd008bcd2f7ff923d0ec83
 J'ai utilisé la fonction lmplot de seaborn pour visualiser les relations entre différents critères. Une illustration intéressante montre une relation entre la moyenne de commande par client et le nombre de produits achetés. La majorité des clients semblent s'intéresser aux produits moins chers, ce qui est confirmé par les moyennes de commande les plus basses. De plus, cette population achète un plus grand nombre de produits par rapport aux clients ayant une moyenne de dépense supérieure.
 
 Un autre graphique montre que la majorité des clients ayant dépensé des montants élevés n'utilisent pas particulièrement les coupons. Cela pourrait indiquer qu'il serait bénéfique d'explorer les raisons potentielles de ce comportement.
 
 6. Analyse des Catégories de Produits:
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 664e42d471e6716547bd008bcd2f7ff923d0ec83
 Pour identifier les catégories de produits les plus vendus, j'ai créé un diagramme en secteurs pour les 20 produits les plus vendus. On remarque que près de 30% des produits sont des couches jetables, 10.6% des produits sont des pyjamas et vêtements de nuit, et le reste est réparti de manière presque équitable entre 8.8% et 7%.
 
 ### Calcul du RFM score afin de distinguer les tops acheteurs
@@ -93,7 +76,6 @@ PS: j'ai ajouté à cela le nombre de produits (P) étant donné que le nombre d
 Le modèle RFM est utilisé pour:
 
 1. Identifier les meilleurs clients :
-<<<<<<< HEAD
 
  En combinant les scores de récence, de fréquence, de montant et de nombre de produit, j'ai pu donc déterminé quels clients sont les plus précieux pour l'entreprise.
 2. Segmenter les clients : 
@@ -104,15 +86,13 @@ Cela permet de créer des segments de clients basés sur leur comportement d'ach
 En comprenant les comportements passés, nous pouvons mieux anticiper les actions futures des clients.
 4. Pondération des Critères:
 
-=======
-   
  En combinant les scores de récence, de fréquence, de montant et de nombre de produit, j'ai pu donc déterminé quels clients sont les plus précieux pour l'entreprise.
 3. Segmenter les clients : 
 Cela permet de créer des segments de clients basés sur leur comportement d'achat et de cibler ces segments avec des stratégies marketing spécifiques.
 4. Prédire le comportement futur des clients : 
 En comprenant les comportements passés, nous pouvons mieux anticiper les actions futures des clients.
 5. Pondération des Critères:
->>>>>>> 664e42d471e6716547bd008bcd2f7ff923d0ec83
+
 Pour affiner notre modèle RFM, nous avons attribué des poids spécifiques à chaque critère, ainsi qu'au nombre de produits achetés :
 
 Montant (M) : Pondéré à 0.4
