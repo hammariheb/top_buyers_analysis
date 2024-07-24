@@ -61,8 +61,11 @@ Pour identifier les catégories de produits les plus vendus, j'ai créé un diag
 Dans cette partie de l'analyse, j'ai mis en place un modèle RFPM pondéré pour évaluer la valeur des clients en fonction de leur comportement d'achat. Le modèle RFPM (Récence, Fréquence, Montant et nombre de produits) est une technique de segmentation client qui permet d'identifier les clients les plus précieux en se basant sur 4 critères principaux :
 
 Récence (R) : Temps écoulé depuis la dernière commande du client. Les clients ayant effectué des achats récemment sont généralement plus susceptibles de refaire un achat.
+
 Fréquence (F) : Nombre total de commandes passées par le client. Les clients qui achètent plus fréquemment sont souvent plus fidèles.
+
 Montant (M) : Valeur totale des achats effectués par le client. Les clients dépensant plus d'argent sont considérés comme plus précieux.
+
 PS: j'ai ajouté à cela le nombre de produits (P) étant donné que le nombre de produits acheté est une métrique importante pour l'entreprise.
 
 #### Pourquoi le Modèle RFM ?
@@ -79,8 +82,11 @@ En comprenant les comportements passés, nous pouvons mieux anticiper les action
 Pour affiner notre modèle RFM, nous avons attribué des poids spécifiques à chaque critère, ainsi qu'au nombre de produits achetés :
 
 Montant (M) : Pondéré à 0.4
+
 Fréquence (F) : Pondéré à 0.3
+
 Récence (R) : Pondéré à 0.2
+
 Nombre de produits (P) : Pondéré à 0.1
 
 Ces pondérations permettent de donner plus d'importance aux critères que nous jugeons plus influents dans l'évaluation de la valeur des clients.
